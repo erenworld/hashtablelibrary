@@ -45,4 +45,3 @@ This project is released under the [MIT License](http://goldsborough.mit-license
 
 [Eren Turkoglu](http://www.goldsborough.me)
 
-<a href="https://gratipay.com/~goldsborough/"><img src="http://img.shields.io/gratipay/goldsborough.png?style=flat-square"></a>
