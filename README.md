@@ -43,6 +43,6 @@ This project is released under the [MIT License](http://goldsborough.mit-license
 
 ## Authors
 
-[Peter Goldsborough](http://www.goldsborough.me) + [cat](https://goo.gl/IpUmJn) :heart:
+[Eren Turkoglu](http://www.goldsborough.me)
 
 <a href="https://gratipay.com/~goldsborough/"><img src="http://img.shields.io/gratipay/goldsborough.png?style=flat-square"></a>
