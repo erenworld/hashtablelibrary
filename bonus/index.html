@@ -6,22 +6,18 @@
     <title>Hashtable Library in C</title>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./logo.avif" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <div class="sidebar flex justify-btw">
             <ul>
                 <li><p>GETTING STARTED</p></li>
-                <li><a href="#">Introduction</a></li>
-                <li><a href="#">Quickstart</a></li>
-                <li><a href="#">Create Hashtable</a></li>
-                <li><a href="#">Destroy Hashtable</a></li>
-                <li><a href="#">Insert at Hashtable</a></li>
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Delete</a></li>
-                <li><a href="#">Examples</a></li>
-                <li><a href="#">Contribute</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#quickstart">Quickstart</a></li>
+                <li><a href="#example">Example</a></li>
+                <li><a href="#contribute">Contribute</a></li>
+                <li><a href="#about-us">About us</a></li>
             </ul>
             <div class="flex icons">
                 <a href="" class="icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a>
@@ -32,66 +28,96 @@
         </div>
 
         <div class="content">
-            <h1>Hashtable Library Documentation</h1>
-            <p>Ceci est un exemple de contenu principal à côté de la barre latérale.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet tincidunt risus.</p>
-            <br><br>
-            <h1>Aperçu</h1>
-            <div class="callout">
-                <p>This is a simple green callout with a more prominent green left border.</p>
+            <h1 class="title">Hashtable Library Documentation</h1>
+            <h1 id="introduction">Introduction</h1>
+            <p>A <strong>hashtable (or hash map)</strong> in C is a data structure that stores key-value pairs and provides efficient insertion, deletion, and lookup operations. It uses a hash function to compute an index (or hash code) for each key, which determines where the corresponding value is stored in an underlying array.</p>
+            <p>The primary advantage of a hashtable is its ability to achieve average-case O(1) time complexity for these operations, making it highly efficient for managing large datasets.</p>
+        <br>
+        <div>
+        <h1 id="quickstart">Quickstart</h1>
+        <p>To install and use the Hashtable Library, follow these steps</p>
+        <br>
+        <h2 class="h2">1. Clone the Repository</h2>
+        <p>Clone the repository to your local machine</p>
+            <div class="mycode">
+                <p class="mycodep">git clone https://github.com/erenworld/hashtablelibrary</p>
+                <p class="mycodep">cd hashtablelibrary</p>
             </div>
-        <p>La bibliothèque Hashtable fournit une implémentation simple et efficace d'une structure de données de type table de hachage en C. Cette bibliothèque permet une insertion, une suppression et une récupération rapides des paires clé-valeur, ce qui la rend adaptée à diverses applications nécessitant un accès rapide aux données.</p>
+            <br><br>
+        <h2 class="h2">2. Build the Library</h2>
+        <p>Compile the library using the provided Makefile</p>
+                <div class="mycode">
+                    <p class="mycodep">make </p>
+                </div>
             
         <br><br>
-        <h1>Fonctionnalités</h1>
-        <p><strong>Redimensionnement dynamique :</strong> Redimensionne automatiquement la table de hachage lorsque un certain facteur de charge est dépassé.</p>
-        <p><strong>Résolution des collisions :</strong> Implémente le chaînage séparé ou l'adressage ouvert pour gérer les collisions.</p>
-        <p><strong>Fonction de hachage personnalisable :</strong> Les utilisateurs peuvent définir leurs propres fonctions de hachage pour différents types de données.</p>
-        <p><strong>Gestion de la mémoire :</strong> Gère l'allocation et la désallocation de la mémoire pour prévenir les fuites de mémoire.</p>
-        <br><br>
-        <h1>Installation</h1>
+        <h2 id="example" class="h2">3. Create a main.c file</h2>
+        <p>Write your program in main.c to use the hashtable library.</p>
         <div class="codeblock">
             <div class="flex codeblockhead justify-btw">
-             <p>main.c</p><div class="codecopy"><svg class="svg" height="15" fill="none" stroke="currentColor" stroke-width="2" class="nextra-copy-icon" viewBox="0 0 24 24"><rect width="13" height="13" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
+                <p>main.c</p>
+                <div class="codecopy">
+                    <svg class="svg" height="15" fill="none" stroke="currentColor" stroke-width="2" class="nextra-copy-icon" viewBox="0 0 24 24">
+                        <rect width="13" height="13" x="9" y="9" rx="2"/>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                    </svg>
+                </div>
             </div>
             <pre class="nextra-focus _overflow-x-auto _subpixel-antialiased _text-[.9em] _bg-white dark:_bg-black _py-4 _ring-1 _ring-inset _ring-gray-300 dark:_ring-neutral-700 contrast-more:_ring-gray-900 contrast-more:dark:_ring-gray-50 contrast-more:_contrast-150 _rounded-b-md" tabindex="0">
                 <code class="nextra-code" dir="ltr">
-        <span class="keyword">import</span><span class="comment">  { parse }  </span><span class="keyword">from  </span><span class="string">'react-docgen'</span>;
-        <span class="keyword">const</span><span class="variable"> code</span><span class="keyword"> =</span><span class="string"></span>
-        <span class="string">export default ({ name }: { name: string }) =&gt; &lt;div&gt;{{name}}&lt;/div&gt;;</span></code>
-              </pre>
-        </div>
-        <p>Pour utiliser la bibliothèque hashtable, suivez ces étapes :</p>
-        <br><br>
-
-        <h1>Référence API</h1>
-        <div class="calloutblue">
-            <p>This is a simple green callout with a more prominent green left border.</p>
-        </div>
-        <p>La bibliothèque Hashtable en C permet de créer et de gérer des tables de hachage efficaces pour stocker des paires clé-valeur. Elle fournit diverses fonctions pour initialiser la table, insérer des éléments, supprimer des éléments et rechercher des clés spécifiques. Cette API prend en charge le redimensionnement automatique de la table en fonction de la charge et gère les collisions par chaînage ou adressage ouvert.</p>
-        <br>
-        <div class="codeblock">
-            <div class="flex codeblockhead justify-btw">
-             <p>main.c</p><div class="codecopy"><svg class="svg" height="15" fill="none" stroke="currentColor" stroke-width="2" class="nextra-copy-icon" viewBox="0 0 24 24"><rect width="13" height="13" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
-            </div>
-            <pre class="nextra-focus _overflow-x-auto _subpixel-antialiased _text-[.9em] _bg-white dark:_bg-black _py-4 _ring-1 _ring-inset _ring-gray-300 dark:_ring-neutral-700 contrast-more:_ring-gray-900 contrast-more:dark:_ring-gray-50 contrast-more:_contrast-150 _rounded-b-md" tabindex="0">
-                <code class="nextra-code" dir="ltr">
-        <span class="keyword">import</span><span class="comment">  { parse }  </span><span class="keyword">from  </span><span class="string">'react-docgen'</span>;
-        <span class="keyword">const</span><span class="variable"> code</span><span class="keyword"> =</span><span class="string"></span>
-        <span class="string">export default ({ name }: { name: string }) =&gt; &lt;div&gt;{{name}}&lt;/div&gt;;</span></code>
-              </pre>
-        </div>
+        <span class="keyword">#include "hashtable.h"</span>
+        <span class="keyword">#include &lt;stdio.h&gt;</span>
         
+        <span class="keyword">int</span> <span class="function">main</span>() {
+            <span class="comments">// Create a hashtable with a size of 10</span>
+            <span class="variable">hashtable_t</span> *ht = <span class="function">new_hashtable</span>(hash, 10);
+        
+            <span class="comments">// Insert key-value pairs</span>
+            <span class="function">ht_insert</span>(ht, <span class="string">"name"</span>, <span class="string">"Alice"</span>);
+            <span class="function">ht_insert</span>(ht, <span class="string">"age"</span>, <span class="string">"25"</span>);
+            <span class="function">ht_insert</span>(ht, <span class="string">"city"</span>, <span class="string">"New York"</span>);
+        
+            <span class="comments">// Search for a value by key</span>
+            <span class="variable">char</span> *name = <span class="function">ht_search</span>(ht, <span class="string">"name"</span>);
+            <span class="keyword">if</span> (name) {
+                <span class="function">printf</span>(<span class="string">"Name: %s\n"</span>, name); <span class="comments">// Output: Name: Alice</span>
+            }
+        
+            <span class="comments">// Display the contents of the hashtable</span>
+            <span class="function">printf</span>(<span class="string">"\nHashtable Contents:\n"</span>);
+            <span class="function">ht_dump</span>(ht);
+        
+            <span class="comments">// Delete a key</span>
+            <span class="function">ht_delete</span>(ht, <span class="string">"age"</span>);
+        
+            <span class="comments">// Display the contents again after deletion</span>
+            <span class="function">printf</span>(<span class="string">"\nHashtable Contents after deleting 'age':\n"</span>);
+            <span class="function">ht_dump</span>(ht);
+        
+            <span class="comments">// Free the hashtable</span>
+            <span class="function">delete_hashtable</span>(ht);
+            <span class="keyword">return</span> 0;
+        }
+                </code>
+            </pre>
+        </div>
         <br><br>
-        <h1>Contributions</h1>
-        <p>Les contributions sont les bienvenues ! Si vous avez des suggestions ou des améliorations, veuillez soumettre une demande de tirage ou ouvrir un problème dans le dépôt.</p>
+        <h2 class="h2">4. Compile and Run</h2>
+        <p>Write your program in main.c to use the hashtable library.</p>
+        <div class="mycode">
+            <p class="mycodep">gcc main.c -L. -lhashtable -o my_program <br>
+                ./my_program </p>
+        </div>
         <br><br>
-        <h1>Licence</h1>
-        <p>Cette bibliothèque est sous licence MIT. Veuillez consulter le fichier LICENSE pour plus de détails.</p>
+        <h1 id="contribute">Contributions</h1>
+        <p>Contributions are welcome! If you have any suggestions or improvements, please submit a pull request or open an issue in the repository.</p>
+        <br>
+        <h1>License</h1>
+        <p>This library is licensed under the MIT license. Please see the LICENSE file for details.</p>
     <!--FOOTER-->
     <footer class="flex footer">
         <div>
-            <a href=""><strong>Made by Eren and Louis 🤗</strong></a>
+            <a id="about-us" href="https://github.com/erenworld/hashtablelibrary"><strong>Made by Eren and Louis 🤗</strong></a>
         </div>
     </footer>
     </div>

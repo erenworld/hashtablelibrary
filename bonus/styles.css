@@ -32,9 +32,7 @@ html {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
+
 blockquote, q {
 	quotes: none;
 }
@@ -82,8 +80,17 @@ body {
     background-color: #f5f5f5;
 }
 
+.comments {
+    color: rgb(144, 144, 144)
+}
+
+.string {
+    color: orange;
+}
+
 .flex {
     display: flex;
+    align-items: center;
 }
 .justify-btw {
     justify-content: space-between;
@@ -150,11 +157,11 @@ body {
     font-size: 32px;
     font-weight: 550;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 p {
-    color: #868484;
+    color: #535353;
 }
 
 .content p {
@@ -177,6 +184,15 @@ p {
     .content {
         padding: 20px;
     }
+}
+
+.h2 {
+    font-size: 23px;
+    font-weight: 500;
+}
+h1.title {
+    font-weight: 700;
+    font-size: 34px;
 }
 
 
@@ -270,8 +286,24 @@ body.dark pre {
     border: 1px solid rgb(228, 226, 226);
     border-radius: 10px;
     max-width: 600px;
+    margin: 10px 0;
 }
 
 .svg {
     color: #3c4552;
+}
+
+.mycode {
+    background-color: rgb(245, 245, 245);
+    color: #1F1F1F;
+    padding: 9px 19px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border:1px solid rgb(212, 212, 212);
+    display: inline-block; 
+    white-space: nowrap;
+}
+
+.mycode > p {
+    color: #8e8f90;
 }
